@@ -38,8 +38,8 @@ class BlackScholes:
         normal_dist = NormalDist(mu=mu, sigma=1)
         if self.isCall:
             c = normal_dist.cdf(d_plus) * s - normal_dist.cdf(d_minus) * k * np.exp(-r * tte)
-            return c
+            return round(c, 2)
         else:
             p = normal_dist.cdf(-d_minus) * k * np.exp(-r * tte) - normal_dist.cdf(-d_plus) * s
-            return p
+            return round(p, 2)
 
