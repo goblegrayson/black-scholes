@@ -1,5 +1,5 @@
 """
-black_scholes.py
+model.py
 A class to model the black scholes option pricing formula.
 """
 from statistics import NormalDist
