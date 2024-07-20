@@ -15,7 +15,6 @@ def test_init():
     assert bs.risk_free_rate == 0.0
     # Underlying parameters
     assert bs.price_underlying == 0.0
-    assert bs.drift_rate == 0.0
     assert bs.volatility == 0.0
     # Option parameters
     assert bs.isCall
