@@ -1,1 +1,1 @@
-Now, what if we start taking numerical derivatives?
+Now, what if we start perturbing the model? How will price change with vol or strike? I'll specify a range of strikes and volatility around which to perturb the model and plot the resulting price surface below.

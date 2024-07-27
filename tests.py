@@ -4,7 +4,7 @@ Tests for black_scholes module.
 """
 import pytest
 import model
-
+import timeit
 
 def test_init():
     bs = model.BlackScholes()
@@ -45,4 +45,5 @@ def test_price_call():
     assert round(bs.option_price, 2) == 12.53
     bs.isCall = False
     assert round(bs.option_price, 2) == 7.29
+
 

@@ -1,15 +1,22 @@
 Like many before me, I\'ll endeavor to gain some intuitive 
 understanding of the Black-Scholes valuation formula. I'll be using the formulation from the original ['73 paper](https://www.jstor.org/stable/1831029?origin=JSTOR-pdf).
 
-<!--- d<sub>1</sub> = --->
+### $$ d_1 = {\ln{(\frac{x}{c})} + (r + \frac{1}{2}v^2)(t^* - t) \over v \sqrt{t^* - t}} $$
 
-<!--- d<sub>2</sub> = --->
+### $$ d_2 = {\ln{(\frac{x}{c})} + (r - \frac{1}{2}v^2)(t^* - t) \over v \sqrt{t^* - t}} $$
 
-w(x,t) = xN(d<sub>1</sub>) - ce<sup>r(t-t*)</sup>N(d<sub>2</sub>)
+### $$ w(x,t) = xN(d_1) - ce^{r(t-t^*)}N(d_2) $$
 
-u(x,t) = -xN(-d<sub>1</sub>) + ce<sup>-rt*</sup>N(-d<sub>2</sub>)
+### $$ u(x,t) = -xN(-d_1) + ce^{-rt^*}N(-d_2) $$
 
-Fatherhood calls, but I need to write up d<sub>1</sub> and d<sub>2</sub> as well!
+Where:
+- x = spot price
+- c = strike price
+- r = risk free interest rate
+- v = volatility (the standard deviation of the distribution of annualized stock returns)
+- $$ t^* $$ = maturity time of the option
+- t = time
+- N(d) = the cumulative normal density function
 
 As with all models, it's important to remind myself of the basic assumptions and limitations of the formula:
 - :green[***Short-term interest rates are known and constant through time.***]
