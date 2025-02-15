@@ -6,6 +6,7 @@ import pytest
 import model
 import timeit
 
+
 def test_init():
     bs = model.BlackScholes()
     assert isinstance(bs, model.BlackScholes)
